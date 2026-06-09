@@ -1,75 +1,36 @@
-# React + TypeScript + Vite
+# Retail Excellence Learning Portal 🎓
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Обучающий веб-портал для онбординга и адаптации новых сотрудников компании **Retail Excellence** — официального дистрибьютора брендов **Tommy Hilfiger** и **Calvin Klein**.
 
-Currently, two official plugins are available:
+## 📝 О проекте
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+В сфере премиального ритейла критически важно передавать стандарты сервиса, специфику работы с клиентами и тонкости мерчандайзинга без потери качества информации. 
 
-## React Compiler
+### Какую проблему решает проект?
+Раньше обучение новых сотрудников строилось по принципу «из уст в уста». Это приводило к ряду сложностей:
+* **Человеческий фактор:** важные детали работы с премиальными брендами могли забываться или искажаться.
+* **Потеря времени:** опытные сотрудники и руководители тратили много рабочих часов на однотипные линейные объяснения.
+* **Медленный старт:** новичкам требовалось больше времени, чтобы полноценно вникнуть в процессы.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Решение
+Данный портал автоматизирует процесс обучения. Новые сотрудники могут **самостоятельно, последовательно и интерактивно** разбирать ключевые темы, изучать стандарты брендов Tommy Hilfiger и Calvin Klein, правила коммуникации с клиентами и быстрее выходить на плановые показатели продаж.
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 🛠 Стек технологий
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Проект построен на современном и надежном технологическом стеке, обеспечивающем высокую скорость работы и типизацию:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* [React](https://react.dev) — декларативный UI-фреймворк для создания динамического интерфейса.
+* [TypeScript](https://typescriptlang.org) — строгая типизация для минимизации ошибок и масштабируемости кода.
+* [Tailwind CSS](https://tailwindcss.com) — утилитарный CSS-фреймворк для быстрой, адаптивной и стильной верстки в единой дизайн-системе.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Функционал приложения (В разработке)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+* [ ] **Авторизация сотрудников:** безопасный вход в личный кабинет по корпоративным данным.
+* [ ] **База знаний по брендам:** разделы, посвященные истории, коллекциям и ДНК брендов Tommy Hilfiger и Calvin Klein.
+* [ ] **Техники продаж и сервис:** интерактивные модули по работе с возражениями, стандартами обслуживания и психологии клиентов в премиум-сегменте.
+* [ ] **Интуитивный интерфейс:** адаптивный дизайн, одинаково удобный как для компьютеров в офисе, так и для смартфонов сотрудников прямо на торговой точке.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
