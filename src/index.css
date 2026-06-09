@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes rotateMask {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
+
+/* Регистрируем кастомное свойство для плавной анимации угла градиента */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.animate-diagonal-mask {
+  mask-image: linear-gradient(var(--angle), black 50%, transparent 50%);
+  -webkit-mask-image: linear-gradient(var(--angle), black 50%, transparent 50%);
+  animation: rotateMask 10s linear infinite;
+}
+
