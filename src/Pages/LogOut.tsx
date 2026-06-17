@@ -23,7 +23,7 @@ function LogOut() {
           <input type="text" placeholder="Логин" className="border p-2 rounded text-sm "  />
           <input type="password" placeholder="Пароль" className="border p-2 rounded text-sm" />
           <button className="bg-stone-800 text-white py-2 rounded text-sm font-medium">Продолжить</button>
-          <p>Данные для входа взять у руководителя</p>
+          <p>Данные для входа возьми у руководителя</p>
         </div>
       </div>
 

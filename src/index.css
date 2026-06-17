@@ -1,17 +1,21 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@keyframes rotateMask {
-  0% {
-    --angle: 0deg;
-  }
-  100% {
-    --angle: 360deg;
-  }
+@theme {
+  /* Создает класс font-nunito */
+  --font-nunito: 'Nunito', sans-serif;
 }
 
-/* Регистрируем кастомное свойство для плавной анимации угла градиента */
+
+
+@keyframes rotateMask {
+  0% { --angle: 0deg; }
+  100% { --angle: 360deg; }
+}
+
 @property --angle {
   syntax: '<angle>';
   initial-value: 0deg;
@@ -24,3 +28,6 @@
   animation: rotateMask 10s linear infinite;
 }
 
+.force-nunito {
+  font-family: 'Nunito', sans-serif !important;
+}
